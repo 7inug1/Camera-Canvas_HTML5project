@@ -1,3 +1,5 @@
+// keywords: indexedDB, cookies
+
 let localStorageList = document.getElementById('localStrorageList');
 let str="";
 let savedImageContainer = document.getElementById('savedImageContainer');

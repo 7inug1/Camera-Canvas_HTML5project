@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="camera.js" type="text/javascript" defer></script>
   <script src="canvas.js" type="text/javascript" defer></script>
-  <script src="dragAndDrop.js" type="text/javascript" defer></script>
-  <script src="geolocation.js" type="text/javascript" defer></script>
+  <!-- <script src="dragAndDrop.js" type="text/javascript" defer></script> -->
+  <!-- <script src="geolocation.js" type="text/javascript" defer></script> -->
   <script src="onlineOfflineEvent.js" type="text/javascript" defer></script>
   <script src="localStorage.js" type="text/javascript" defer></script>
   <link rel="stylesheet" href="style.css">
@@ -46,9 +46,7 @@
       <canvas id="canvasOne"></canvas>
 
       <div class="photoContainer">
-        <img id="photoOne" alt="Container for webcam capture" draggable="true" ondragstart="drag(event)"></img>
-        <div id="geolocationStamp">Geolocation Caption</div><br>
-        <button type="button" onclick="getLocation()">Where am I?</button>
+        <img id="photoOne" alt="Container for webcam capture"></img>
         <button type="button" id="capturedPhotoSaveButton">
           Save
         </button>
@@ -64,7 +62,7 @@
       </div>
 
       <div class="photoContainer">
-        <img id="photoTwo" alt="Canvas drawing will be saved here" draggable="true" ondragstart="drag(event)"></img>
+        <img id="photoTwo" alt="Canvas drawing will be saved here"></img>
         <button id="capturedDrawingSaveButton">
           Save
         </button>
@@ -76,10 +74,10 @@
     <ul id="localStrorageList">None</ul>
     <div id="savedImageContainer"></div>
     
-    <div id="galleryArea">
+    <!-- <div id="galleryArea">
       <div class="dropReceiver" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       <div class="dropReceiver" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    </div>
+    </div> -->
     
   </main>
 </body>
