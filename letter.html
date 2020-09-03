@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="camera.js" type="text/javascript" defer></script>
   <script src="canvas.js" type="text/javascript" defer></script>
-  <!-- <script src="dragAndDrop.js" type="text/javascript" defer></script> -->
-  <!-- <script src="geolocation.js" type="text/javascript" defer></script> -->
   <script src="onlineOfflineEvent.js" type="text/javascript" defer></script>
   <script src="localStorage.js" type="text/javascript" defer></script>
   <link rel="stylesheet" href="style.css">
@@ -16,7 +14,6 @@
 </head>
 
 <body>
-  
   <div id="statusBar">
     You're currently connected:  <span id="onlineOfflineStatus">I am not sure of the status yet!</span>
   </div>
@@ -44,29 +41,28 @@
       </div> 
 
       <canvas id="canvasOne"></canvas>
-
-      <div class="photoContainer">
-        <img id="photoOne" alt="Container for webcam capture"></img>
+      <canvas id="canvasTwo" width="310" height="240"></canvas>
+      <!-- <div class="photoContainer">        
         <button type="button" id="capturedPhotoSaveButton">
           Save
-        </button>
+        </button> -->
       </div>
 
     </div> 
-    
+    <!-- <img src="./images/jpegPhoto.jpg" id="hello" width="320" height="240"></img> -->
     <div class="area">
 
       <div class="canvas">
-        <canvas id="canvasTwo" width="320" height="240"></canvas>
+        <!-- <canvas id="canvasTwo" width="320" height="240"></canvas> -->
         <button id="canvasButton">Save Drawing</button>
       </div>
 
-      <div class="photoContainer">
+      <!-- <div class="photoContainer">
         <img id="photoTwo" alt="Canvas drawing will be saved here"></img>
         <button id="capturedDrawingSaveButton">
           Save
         </button>
-      </div>
+      </div> -->
 
     </div> 
 

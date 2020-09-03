@@ -1,9 +1,11 @@
 let width = 320;
 let height = 240;
 let video = document.getElementById('video');
-let photo = document.getElementById('photoOne');
+let photo = document.createElement('img');
 let canvasOne = document.getElementById('canvasOne');
 let contextOne = canvasOne.getContext('2d');
+let canvasTwo = document.getElementById('canvasTwo');
+let contextTwo = canvasTwo.getContext('2d');
 let streaming = false;
 let cameraOnButton = document.getElementById('cameraOnButton');
 let cameraOffButton = document.getElementById('cameraOffButton');
@@ -16,10 +18,14 @@ let constraints = (window.constraints = {
   video: true,
 });
 
+
+// let test=document.getElementById('hello');
+// contextOne.drawImage(test, 0, 0);
+
 cameraOnButton.addEventListener('click', turnCameraOn);
 cameraOffButton.addEventListener('click', turnCameraOff);
 cameraCaptureButton.addEventListener('click', captureImage);
-capturedPhotoSaveButton.addEventListener('click', saveImage);
+// capturedPhotoSaveButton.addEventListener('click', saveImage);
 
 function turnCameraOn(){
   navigator.mediaDevices.getUserMedia(constraints)
@@ -55,7 +61,10 @@ function captureImage(){
     canvasOne.height = height;
     contextOne.drawImage(video, 0, 0, width, height);
     data = canvasOne.toDataURL('image/png');
-    photo.setAttribute('src', data);    
+    photo.setAttribute('src', data);  
+    
+
+    contextTwo.drawImage(photo, 0, 0, 320, 240);
   } else {
     clearImage();
   }
