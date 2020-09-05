@@ -7,7 +7,7 @@
   <script src="camera.js" type="text/javascript" defer></script>
   <script src="canvas.js" type="text/javascript" defer></script>
   <script src="onlineOfflineEvent.js" type="text/javascript" defer></script>
-  <script src="localStorage.js" type="text/javascript" defer></script>
+  <script src="service-worker.js" type="text/javascript" defer></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
   <title>Document</title>
@@ -17,8 +17,9 @@
   <div id="statusBar">
     You're currently connected:  <span id="onlineOfflineStatus">I am not sure of the status yet!</span>
   </div>
-  
+
   <main>
+    <h1>WebCam</h1>
     <div class="area">
       <div id="cameraButtons">
         <video id="video"></video>
@@ -39,42 +40,9 @@
         </button>
 
       </div> 
-
-      <canvas id="canvasOne"></canvas>
-      <canvas id="canvasTwo" width="310" height="240"></canvas>
-      <!-- <div class="photoContainer">        
-        <button type="button" id="capturedPhotoSaveButton">
-          Save
-        </button> -->
-      </div>
-
+      
+      <canvas id="canvasOne" width="320" height="240"></canvas>
     </div> 
-    <!-- <img src="./images/jpegPhoto.jpg" id="hello" width="320" height="240"></img> -->
-    <div class="area">
-
-      <div class="canvas">
-        <!-- <canvas id="canvasTwo" width="320" height="240"></canvas> -->
-        <button id="canvasButton">Save Drawing</button>
-      </div>
-
-      <!-- <div class="photoContainer">
-        <img id="photoTwo" alt="Canvas drawing will be saved here"></img>
-        <button id="capturedDrawingSaveButton">
-          Save
-        </button>
-      </div> -->
-
-    </div> 
-
-    <h1>LocalStorage List</h1>
-    <ul id="localStrorageList">None</ul>
-    <div id="savedImageContainer"></div>
-    
-    <!-- <div id="galleryArea">
-      <div class="dropReceiver" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      <div class="dropReceiver" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    </div> -->
-    
   </main>
 </body>
 </html>
